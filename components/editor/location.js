@@ -1,5 +1,4 @@
 import React from 'react';
-import TextField from '@mui/material/TextField';
 
 export default function Location(props){
     return(
@@ -9,22 +8,22 @@ export default function Location(props){
         <hr></hr>
         <h2 id='location' className='font-semibold text-xl'>Location</h2>
         <div>
-        <TextField fullWidth id="outlined-basic" label="Address" variant="outlined" size='small' />
+        <input type="text"  placeholder="Full Name" class="input input-bordered  min-w-full max-w-xs bg-slate-900" />
         </div>
         <div className='grid grid-cols-2 gap-6'>
         <div>
-        <TextField fullWidth id="outlined-basic" label="City" variant="outlined" size='small' />
+        <input type="text"  placeholder="Full Name" class="input input-bordered  min-w-full max-w-xs bg-slate-900" />
         </div>
         <div>
-        <TextField fullWidth id="outlined-basic" label="Region" variant="outlined" size='small' />
+        <input type="text"  placeholder="Full Name" class="input input-bordered  min-w-full max-w-xs bg-slate-900" />
     </div> 
         </div>
         <div className='grid grid-cols-2 gap-6'>
         <div>
-        <TextField fullWidth id="outlined-basic" label="Country" variant="outlined" size='small' />
+        <input type="text"  placeholder="Full Name" class="input input-bordered  min-w-full max-w-xs bg-slate-900" />
         </div>
         <div>
-        <TextField fullWidth id="outlined-basic" label="Postal Code" variant="outlined" size='small' />
+        <input type="text"  placeholder="Full Name" class="input input-bordered  min-w-full max-w-xs bg-slate-900" />
     </div> 
         </div>
         <hr></hr>

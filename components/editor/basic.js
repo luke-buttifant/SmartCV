@@ -1,10 +1,7 @@
-import React, {useEffect, useState} from 'react';
-import TextField from '@mui/material/TextField';
-import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
-import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
-import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import React from 'react';
 
 export default function Basic(props){
+
     return(
         <>
                 <section id='basics' className='grid grid-cols-1 gap-3'>
@@ -13,26 +10,26 @@ export default function Basic(props){
                 <div className='mx-auto'><img className='w-20 rounded-full' src='/img/defaultDP.jpg'></img></div>
                 <div className="grid grid-rows-2 gap-2">
                     <div>
-                    <TextField fullWidth id="outlined-basic" label="Full Name" variant="outlined" size='small' onChange={(e) => {props.setName(e.target.value)}}/>
+                    <input type="text" onChange={(e) => {props.setName(e.target.value)}} placeholder="Full Name" class="input input-bordered  min-w-full max-w-xs bg-slate-900" />
                     </div>
                     <div>
-                        <button className="min-w-[100%] bg-red-600 min-h-20">Test</button>
+                        <button className="min-w-[100%] min-h-20 bg-slate-900 rounded-lg py-2 text-gray-500">Edit Picture</button>
                     </div>
                 </div>
                 </div>
                 <div>
-                <TextField onChange={(e) => {props.setEmail(e.target.value)}} fullWidth id="outlined-basic" label="Email Address" variant="outlined" size='small' />
+                    <input type="email" onChange={(e) => {props.setEmail(e.target.value)}}placeholder="Email" class="input input-bordered  min-w-full max-w-xs bg-slate-900" />
                 </div>
                 <div className='grid grid-cols-2 gap-6'>
                     <div>
-                    <TextField fullWidth id="outlined-basic" label="Website" variant="outlined" size='small' />
+                    <input type="text" placeholder="Website" class="input input-bordered  min-w-full bg-slate-900" />
                     </div>
                     <div>
-                    <TextField InputLabelProps={{ shrink: true }} type="number" inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }} onChange={(e) => {props.setPhone(e.target.value)}} fullWidth id="outlined-basic" label="Phone Number" variant="outlined" size='small' />
+                    <input type="number" onChange={(e) => {props.setPhone(e.target.value)}} placeholder="Phone Number" class="input input-bordered  min-w-full bg-slate-900" />
                     </div>
                 </div>
         <div>
-        <TextField onChange={(e) => {props.setAboutMe(e.target.value)}} multiline minRows={6} fullWidth id="outlined-basic" label="About Me" variant="outlined" size='small' />
+        <textarea class="textarea  min-w-full bg-slate-900" onChange={(e) => {props.setAboutMe(e.target.value)}} placeholder="Bio"></textarea>
         </div>
                 <hr></hr>
                 </section>
