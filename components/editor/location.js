@@ -5,12 +5,7 @@ export default function Location(props){
     return(
         <>
 <section id="location" className='grid gap-3'>
-        <div>
-        <TextField fullWidth id="outlined-basic" label="Headline" variant="outlined" size='small' />
-        </div>  
-        <div>
-        <TextField multiline minRows={6} fullWidth id="outlined-basic" label="Summary" variant="outlined" size='small' />
-        </div>
+        
         <hr></hr>
         <h2 id='location' className='font-semibold text-xl'>Location</h2>
         <div>

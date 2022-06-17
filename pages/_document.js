@@ -4,7 +4,7 @@ import Document, { Html, Head, Main, NextScript } from "next/document";
 class MyDocument extends Document {
   render() {
     return (
-      <Html lang="en">
+      <Html className="bg-gray-50" lang="en">
         <Head>
           <meta charSet="utf-8" />
           <meta name="theme-color" content="#000000" />
@@ -15,7 +15,7 @@ class MyDocument extends Document {
             href="/img/brand/apple-icon.png"
           />
         </Head>
-        <body className="dark:bg-slate-700 bg-white antialiased">
+        <body className="dark:bg-slate-700 antialiased">
           <div id="page-transition"></div>
           <Main />
           <NextScript />
