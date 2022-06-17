@@ -1,6 +1,4 @@
-import { SessionProvider } from "next-auth/react"
 import { config } from '@fortawesome/fontawesome-svg-core'
-import {useRouter} from 'next/router';
 import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
 import '../styles/globals.css'
@@ -31,17 +29,15 @@ export default function App({
     <Head>
       <title>SmartIV</title>
       <meta name="title" content="SmartIV" />
-      <meta name="description" content="An application that allows users to brush up on their interview skills using articial intelligence tools." />
-      <meta name="keywords" content="Interview, interview practise, interview help, interview guidance, job help" />
+      <meta name="description" content="A dynamic Resume Builder" />
+      <meta name="keywords" content="CV, Resume, CV Builder, Resume Builder" />
       <meta name="robots" content="index, follow" />
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
       <meta name="language" content="English" />
       <meta name="author" content="Luke Buttifant" />
     </Head>
     <Sidebar />
-    <SessionProvider session={session}>
       <Component {...pageProps} />
-    </SessionProvider>
     </>
   )
 }
