@@ -221,8 +221,6 @@ import Photo from "../../components/photo";
       }, [])
 
   
-
-
       useEffect(() => {
         if(form){
             form.setInputs([{
@@ -232,10 +230,10 @@ import Photo from "../../components/photo";
                 "experience-2": "[Company name] [Job title]\n[Dates from]-[to]\n[Describe your responsibilities and achievements in terms of impact and results. Use examples but keep it short.] \n",
                 "experience-3": "[Company name] [Job title]\n[Dates from]-[to]\n[Describe your responsibilities and achievements in terms of impact and results. Use examples but keep it short.] \n",
                 "phone": `Tel: ${props.phone}`,
-                "job-title": "Job Title Here",
+                "job-title": props.job,
                 "education-1": "[School/University/College Name]\n[Dates from]-[to]\n[It’s okay to brag about your final grade, awards and honours. Feel free to summarise your coursework too.]\n",
                 "education-2": "[School/University/College Name]\n[Dates from]-[to]\n[It’s okay to brag about your final grade, awards and honours. Feel free to summarise your coursework too.]",
-                "website": "Web: https://github.com",
+                "website": `Web: ${props.web}`,
                 "email": `Email: ${props.email}`,
                 "profile": props.aboutMe,
                 "hobby-1": "Hobby no.1",

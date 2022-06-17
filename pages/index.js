@@ -10,6 +10,7 @@ export default function Index() {
     const [dob, setDob] = useState("")
     const [email, setEmail] = useState("")
     const [phone, setPhone] = useState("")
+    const [web, setWeb] = useState("")
     const [aboutMe, setAboutMe] = useState("")
 
     useEffect(() => {
@@ -18,13 +19,17 @@ export default function Index() {
 
   return (
     <>
-    <div className="grid grid-cols-8">
-      <div className="col-span-3"><Editor setName={setName} setDob={setDob} setJob={setJob} setEmail={setEmail} setPhone={setPhone} setAboutMe={setAboutMe} /></div>
-     <div className="col-span-4"><Pdf name={name} dob={dob} job={job} email={email} phone={phone} aboutMe={aboutMe}/></div>
-     <div className="col-span-1"><TemplatePicker /></div>
-    </div>
-
+    <div className="grid grid-cols-10">
+      <div  id="options" className="min-w-[40%] xl:col-span-4 xl:grid hidden min-h-[100%]"><Editor setName={setName} setDob={setDob} setJob={setJob} setEmail={setEmail} setPhone={setPhone} setAboutMe={setAboutMe} setWeb={setWeb}/></div>
+     <div className="col-span-10 xl:col-span-5"><Pdf name={name} dob={dob} job={job} email={email} phone={phone} aboutMe={aboutMe} web={web}/></div>
+     <div className="col-span-[1.5] xl:grid hidden bg-gray-800">
     
+    <TemplatePicker />
+     </div>
+
+     </div>
+     
+
     </>
   );
 }
