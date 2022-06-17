@@ -3,7 +3,6 @@ import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
 import '../styles/globals.css'
 import Head from "next/head"
-import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import Sidebar from "../components/Sidebar/Sidebar";
 import Modal from '../components/modal/developmentModal';
 
