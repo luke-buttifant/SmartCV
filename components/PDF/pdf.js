@@ -245,10 +245,20 @@ import Photo from "../../components/photo";
         }
 
       }, [props])
-      
+
+      useEffect(() => {
+        if(typeof window !== "undefined"){
+            var pdf = document.querySelector('#pdf-container').children[0];
+            pdf.style.backgroundColor = ""
+            pdf.classList.add("bg-slate-900")
+            pdf.classList.add("pb-10")
+          }
+      }, [])
+
+
     return(
         <>
-                <div ref={ref} className="min-w-[100%] mx-auto float-right">
+                <div ref={ref} id="pdf-container" className="min-w-[100%] mx-auto float-right">
         </div>
         
         </>
